@@ -1,24 +1,22 @@
 #include "heap.h"
-
+#include <stdexcept>
+#include <algorithm>
 
 MaxHeap::MaxHeap() = default;
 
 MaxHeap::~MaxHeap() = default;
 
-
 std::size_t MaxHeap::parent(std::size_t i) { return (i - 1) / 2; }
 
-std::size_t MaxHeap::left(std::size_t i)   { return 2 * i + 1; }
+std::size_t MaxHeap::left(std::size_t i) { return 2 * i + 1; }
 
-std::size_t MaxHeap::right(std::size_t i)  { return 2 * i + 2; }
-
+std::size_t MaxHeap::right(std::size_t i) { return 2 * i + 2; }
 
 void MaxHeap::swap_nodes(std::size_t i, std::size_t j) {
     std::swap(heap_[i], heap_[j]);
-    index_map_[ heap_[i].value ] = i;
-    index_map_[ heap_[j].value ] = j;
+    index_map_[heap_[i].value] = i;
+    index_map_[heap_[j].value] = j;
 }
-
 
 void MaxHeap::sift_up(std::size_t i) {
     while (i > 0) {
@@ -31,7 +29,6 @@ void MaxHeap::sift_up(std::size_t i) {
         }
     }
 }
-
 
 void MaxHeap::sift_down(std::size_t i) {
     std::size_t n = heap_.size();
@@ -49,8 +46,6 @@ void MaxHeap::sift_down(std::size_t i) {
         }
     }
 }
-
-
 
 void MaxHeap::insert(int value, int priority) {
     if (index_map_.count(value)) {

@@ -1,25 +1,53 @@
+#include "test.h"
 #include <iostream>
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-int main() {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the
-    // <b>lang</b> variable name to see how CLion can help you rename it.
-    auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
+using namespace std;
 
-    for (int i = 1; i <= 5; i++) {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code.
-        // We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/>
-        // breakpoint for you, but you can always add more by pressing
-        // <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
+int main() {
+    int size, samples, operations;
+
+    cout << "Podaj rozmiar struktury: ";
+    cin >> size;
+    cout << "Podaj liczbe egzemplarzy: ";
+    cin >> samples;
+    cout << "Podaj liczbe operacji: ";
+    cin >> operations;
+
+    cout << "WYBIERZ METODE BADAWCZA\n";
+    cout << "1. insert(e, p)\n";
+    cout << "2. extract_max()\n";
+    cout << "3. find_max()\n";
+    cout << "4. modify_key(e, p)\n";
+    cout << "5. return_size()\n";
+
+
+    int wybor;
+    cin >> wybor;
+
+    switch (wybor) {
+        case 1:
+            cout << "BADANIE INSERT (kopiec i tablica)\n";
+        test::test_Insert(size, samples, operations);
+        break;
+        case 2:
+            cout << "BADANIE EXTRACT_MAX (kopiec i tablica)\n";
+        test::test_ExtractMax(size, samples, operations);
+        break;
+        case 3:
+            cout << "BADANIE FIND_MAX (kopiec i tablica)\n";
+        test::test_FindMax(size, samples, operations);
+        break;
+        case 4:
+            cout << "BADANIE MODIFY_KEY (kopiec i tablica)\n";
+        test::test_ModifyKey(size, samples, operations);
+        break;
+        case 5:
+            cout << " BADANIE RETURN_SIZE (kopiec i tablica)\n";
+        test::test_Size(size, samples, operations);
+        break;
+        default:
+            cout << "Nieprawidlowy wybor.\n";
     }
 
     return 0;
 }
-
-// TIP See CLion help at <a
-// href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
-//  Also, you can try interactive lessons for CLion by selecting
-//  'Help | Learn IDE Features' from the main menu.
