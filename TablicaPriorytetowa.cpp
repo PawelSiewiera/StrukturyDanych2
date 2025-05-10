@@ -35,9 +35,6 @@ void TablicaPriorytetowa::zmniejsz() {
 }
 
 void TablicaPriorytetowa::insert(int wartosc, int priorytet) {
-    for (size_t i = 0; i < rozmiar; ++i) {
-        if (tablica[i].wartosc == wartosc) return; // unikalność
-    }
     if (rozmiar == pojemnosc) powieksz();
     tablica[rozmiar++] = Wezel(wartosc, priorytet, licznikCzasu++);
 }
