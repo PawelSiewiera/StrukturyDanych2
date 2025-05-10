@@ -1,0 +1,8 @@
+# ninja log v6
+12	427	7685999535489767	CMakeFiles/untitled5.dir/heap.cpp.obj	3e63285f0681d506
+16	436	7685999535529775	CMakeFiles/untitled5.dir/generate_data.cpp.obj	f871faba852d8f8a
+8	450	7685999535449763	CMakeFiles/untitled5.dir/TablicaPriorytetowa.cpp.obj	659ceece93f5e417
+2	519	7685999535389775	CMakeFiles/untitled5.dir/main.cpp.obj	dde916a46c1d4473
+16	342	7686002615896037	CMakeFiles/untitled5.dir/heap.cpp.obj	3e63285f0681d506
+13	795	7686002615856019	CMakeFiles/untitled5.dir/test.cpp.obj	4a0b040dc9922e90
+795	857	7686002623682826	untitled5.exe	7ff09d0d54bfb88

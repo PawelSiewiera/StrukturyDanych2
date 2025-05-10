@@ -52,6 +52,43 @@ build cmake_object_order_depends_target_untitled5: phony || .
 build CMakeFiles/untitled5.dir/main.cpp.obj: CXX_COMPILER__untitled5_unscanned_Debug C$:/Users/pawci/CLionProjects/untitled5/main.cpp || cmake_object_order_depends_target_untitled5
   DEP_FILE = CMakeFiles\untitled5.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/pawci/CLionProjects/untitled5
+  OBJECT_DIR = CMakeFiles\untitled5.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled5.dir
+  TARGET_COMPILE_PDB = CMakeFiles\untitled5.dir\
+  TARGET_PDB = untitled5.pdb
+
+build CMakeFiles/untitled5.dir/test.cpp.obj: CXX_COMPILER__untitled5_unscanned_Debug C$:/Users/pawci/CLionProjects/untitled5/test.cpp || cmake_object_order_depends_target_untitled5
+  DEP_FILE = CMakeFiles\untitled5.dir\test.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/pawci/CLionProjects/untitled5
+  OBJECT_DIR = CMakeFiles\untitled5.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled5.dir
+  TARGET_COMPILE_PDB = CMakeFiles\untitled5.dir\
+  TARGET_PDB = untitled5.pdb
+
+build CMakeFiles/untitled5.dir/TablicaPriorytetowa.cpp.obj: CXX_COMPILER__untitled5_unscanned_Debug C$:/Users/pawci/CLionProjects/untitled5/TablicaPriorytetowa.cpp || cmake_object_order_depends_target_untitled5
+  DEP_FILE = CMakeFiles\untitled5.dir\TablicaPriorytetowa.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/pawci/CLionProjects/untitled5
+  OBJECT_DIR = CMakeFiles\untitled5.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled5.dir
+  TARGET_COMPILE_PDB = CMakeFiles\untitled5.dir\
+  TARGET_PDB = untitled5.pdb
+
+build CMakeFiles/untitled5.dir/heap.cpp.obj: CXX_COMPILER__untitled5_unscanned_Debug C$:/Users/pawci/CLionProjects/untitled5/heap.cpp || cmake_object_order_depends_target_untitled5
+  DEP_FILE = CMakeFiles\untitled5.dir\heap.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/pawci/CLionProjects/untitled5
+  OBJECT_DIR = CMakeFiles\untitled5.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled5.dir
+  TARGET_COMPILE_PDB = CMakeFiles\untitled5.dir\
+  TARGET_PDB = untitled5.pdb
+
+build CMakeFiles/untitled5.dir/generate_data.cpp.obj: CXX_COMPILER__untitled5_unscanned_Debug C$:/Users/pawci/CLionProjects/untitled5/generate_data.cpp || cmake_object_order_depends_target_untitled5
+  DEP_FILE = CMakeFiles\untitled5.dir\generate_data.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/pawci/CLionProjects/untitled5
   OBJECT_DIR = CMakeFiles\untitled5.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled5.dir
   TARGET_COMPILE_PDB = CMakeFiles\untitled5.dir\
@@ -65,7 +102,7 @@ build CMakeFiles/untitled5.dir/main.cpp.obj: CXX_COMPILER__untitled5_unscanned_D
 #############################################
 # Link the executable untitled5.exe
 
-build untitled5.exe: CXX_EXECUTABLE_LINKER__untitled5_Debug CMakeFiles/untitled5.dir/main.cpp.obj
+build untitled5.exe: CXX_EXECUTABLE_LINKER__untitled5_Debug CMakeFiles/untitled5.dir/main.cpp.obj CMakeFiles/untitled5.dir/test.cpp.obj CMakeFiles/untitled5.dir/TablicaPriorytetowa.cpp.obj CMakeFiles/untitled5.dir/heap.cpp.obj CMakeFiles/untitled5.dir/generate_data.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\untitled5.dir
