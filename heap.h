@@ -1,5 +1,5 @@
-#ifndef HEAP_HPP
-#define HEAP_HPP
+#ifndef HEAP_H
+#define HEAP_H
 
 #include <cstddef>
 
@@ -36,4 +36,4 @@ public:
     std::size_t get_size() const;
 };
 
-#endif // HEAP_HPP
+#endif // HEAP_H
