@@ -19,7 +19,7 @@ static int randomPriority(int size) {
 void test::test_Insert(int size, int samples, int operations) {
     long long heap_sum = 0, array_sum = 0;
     for (int e = 0; e < samples; ++e) {
-        MaxHeap heap;
+        Heap heap;
         TablicaPriorytetowa arr;
 
         for (int i = 0; i < size; ++i) {
@@ -52,7 +52,7 @@ void test::test_Insert(int size, int samples, int operations) {
 void test::test_ExtractMax(int size, int samples, int operations) {
     long long heap_sum = 0, array_sum = 0;
     for (int e = 0; e < samples; ++e) {
-        MaxHeap heap;
+        Heap heap;
         TablicaPriorytetowa arr;
 
         for (int i = 0; i < size + operations; ++i) {
@@ -83,7 +83,7 @@ void test::test_ExtractMax(int size, int samples, int operations) {
 void test::test_FindMax(int size, int samples, int operations) {
     long long heap_sum = 0, array_sum = 0;
     for (int e = 0; e < samples; ++e) {
-        MaxHeap heap;
+        Heap heap;
         TablicaPriorytetowa arr;
 
         for (int i = 0; i < size; ++i) {
@@ -94,7 +94,7 @@ void test::test_FindMax(int size, int samples, int operations) {
 
         for (int i = 0; i < operations; ++i) {
             auto t0 = high_resolution_clock::now();
-            heap.peek();
+            heap.find_max();
             auto t1 = high_resolution_clock::now();
             heap_sum += duration_cast<nanoseconds>(t1 - t0).count();
 
@@ -114,7 +114,7 @@ void test::test_FindMax(int size, int samples, int operations) {
 void test::test_ModifyKey(int size, int samples, int operations) {
     long long heap_sum = 0, array_sum = 0;
     for (int e = 0; e < samples; ++e) {
-        MaxHeap heap;
+        Heap heap;
         TablicaPriorytetowa arr;
         vector<int> keys;
 
@@ -151,7 +151,7 @@ void test::test_ModifyKey(int size, int samples, int operations) {
 void test::test_Size(int size, int samples, int operations) {
     long long heap_sum = 0, array_sum = 0;
     for (int e = 0; e < samples; ++e) {
-        MaxHeap heap;
+        Heap heap;
         TablicaPriorytetowa arr;
 
         for (int i = 0; i < size; ++i) {
@@ -162,7 +162,7 @@ void test::test_Size(int size, int samples, int operations) {
 
         for (int i = 0; i < operations; ++i) {
             auto t0 = high_resolution_clock::now();
-            heap.size();
+            heap.get_size();
             auto t1 = high_resolution_clock::now();
             heap_sum += duration_cast<nanoseconds>(t1 - t0).count();
 

@@ -1,43 +1,38 @@
-#ifndef HEAP_H
-#define HEAP_H
+#ifndef HEAP_HPP
+#define HEAP_HPP
 
 #include <cstddef>
-#include <vector>
-#include <unordered_map>
-#include <stdexcept>
 
+class Heap {
+private:
+    struct Node {
+        int value;
+        int priority;
+    };
 
-class MaxHeap {
+    Node* heapArray;
+    std::size_t size;
+    std::size_t capacity;
+
+    void sift_up(std::size_t index);
+    void sift_down(std::size_t index);
+    void swap_nodes(std::size_t i, std::size_t j);
+    void resize_up();
+    void resize_down();
+
+    std::size_t parent(std::size_t i) const { return (i - 1) / 2; }
+    std::size_t left(std::size_t i) const { return 2 * i + 1; }
+    std::size_t right(std::size_t i) const { return 2 * i + 2; }
+
 public:
-    MaxHeap();
-    ~MaxHeap();
+    Heap();
+    ~Heap();
 
     void insert(int value, int priority);
-
-
     int peek() const;
-
-
     int extract_max();
-
-
     void change_priority(int value, int new_priority);
-
-
-    std::size_t size() const noexcept;
-
-private:
-    struct Node { int priority; int value; };
-    std::vector<Node> heap_;
-    std::unordered_map<int, std::size_t> index_map_;
-
-    static std::size_t parent(std::size_t i) { return (i - 1) / 2; }
-    static std::size_t left(std::size_t i)   { return 2 * i + 1; }
-    static std::size_t right(std::size_t i)  { return 2 * i + 2; }
-
-    void swap_nodes(std::size_t i, std::size_t j);
-    void sift_up(std::size_t i);
-    void sift_down(std::size_t i);
+    std::size_t get_size() const;
 };
 
-#endif // HEAP_H
+#endif // HEAP_HPP
