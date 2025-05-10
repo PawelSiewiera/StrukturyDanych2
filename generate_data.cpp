@@ -1,7 +1,6 @@
 #include "generate_data.h"
 #include <cstdlib>
 #include <ctime>
-//v
 static bool initialized = false;
 
 int* generateArray::generateRandom(std::size_t n) {
