@@ -87,7 +87,17 @@ int Heap::extract_max() {
     if (size > 0) sift_down(0);
     return maxValue;
 }
+int Heap::find_max() const {
+    if (size == 0) throw std::out_of_range("Heap is empty");
 
+    std::size_t max_index = 0;
+    for (std::size_t i = 1; i < size; ++i) {
+        if (heapArray[i].priority > heapArray[max_index].priority) {
+            max_index = i;
+        }
+    }
+    return heapArray[max_index].value;
+}
 void Heap::change_priority(int value, int new_priority) {
     for (std::size_t i = 0; i < size; ++i) {
         if (heapArray[i].value == value) {

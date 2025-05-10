@@ -31,6 +31,7 @@ public:
     void insert(int value, int priority);
     int peek() const;
     int extract_max();
+    int find_max() const;
     void change_priority(int value, int new_priority);
     std::size_t get_size() const;
 };
