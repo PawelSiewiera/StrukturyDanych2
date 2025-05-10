@@ -1,5 +1,5 @@
-#ifndef GENERATE_DATA_HPP
-#define GENERATE_DATA_HPP
+#ifndef GENERATE_DATA_H
+#define GENERATE_DATA_H
 
 #include <cstddef>
 #include <vector>
