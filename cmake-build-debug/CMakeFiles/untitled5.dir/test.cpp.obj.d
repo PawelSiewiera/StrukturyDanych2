@@ -128,6 +128,7 @@ CMakeFiles/untitled5.dir/test.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc \
  C:\Users\pc\Desktop\studia\SEM\ 4\Struktury\ danych\StrukturyDanych2\TablicaPriorytetowa.hpp \
  C:\Users\pc\Desktop\studia\SEM\ 4\Struktury\ danych\StrukturyDanych2\Wezel.hpp \
+ C:\Users\pc\Desktop\studia\SEM\ 4\Struktury\ danych\StrukturyDanych2\generate_data.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/chrono \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
