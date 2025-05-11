@@ -62,11 +62,11 @@ void Heap::sift_down(std::size_t index) {
 }
 
 void Heap::insert(int value, int priority) {
-    // Check uniqueness
+  /*  // Check uniqueness
     for (std::size_t i = 0; i < size; ++i) {
         if (heapArray[i].value == value) return;
     }
-
+*/
     if (size == capacity) resize_up();
     heapArray[size++] = {value, priority};
     sift_up(size - 1);
