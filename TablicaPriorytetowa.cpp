@@ -4,7 +4,7 @@
 using namespace std;
 
 TablicaPriorytetowa::TablicaPriorytetowa()
-    : rozmiar(0), pojemnosc(10), licznikCzasu(0) {
+    : rozmiar(0), pojemnosc(10), licznikCzasu(0) {      //alokujemy tablice o pojemnosci 10 na starcie
     tablica = new Wezel[pojemnosc];
 }
 
@@ -19,7 +19,7 @@ void TablicaPriorytetowa::powieksz() {
         nowa[i] = tablica[i];
     }
     delete[] tablica;
-    tablica = nowa;
+    tablica = nowa;                                            //metody odpowiedzialne za budowe tablicy dynamicznej
 }
 
 void TablicaPriorytetowa::zmniejsz() {
@@ -36,7 +36,7 @@ void TablicaPriorytetowa::zmniejsz() {
 
 void TablicaPriorytetowa::insert(int wartosc, int priorytet) {
     if (rozmiar == pojemnosc) powieksz();
-    tablica[rozmiar++] = Wezel(wartosc, priorytet, licznikCzasu++);
+    tablica[rozmiar++] = Wezel(wartosc, priorytet, licznikCzasu++);                 //dodajemy element na koniec i zwieszamy rozmiar
 }
 
 int TablicaPriorytetowa::find_max() const {
@@ -47,7 +47,7 @@ int TablicaPriorytetowa::find_max() const {
         if (tablica[i].priorytet > tablica[idx].priorytet ||
            (tablica[i].priorytet == tablica[idx].priorytet &&
             tablica[i].czasDodania < tablica[idx].czasDodania)) {
-            idx = i;
+            idx = i;                                                                        //rozstrzyganie konfliktu (m.in. FIFO)
         }
     }
     return tablica[idx].wartosc;
@@ -62,7 +62,7 @@ int TablicaPriorytetowa::extract_max() {
            (tablica[i].priorytet == tablica[idx].priorytet &&
             tablica[i].czasDodania < tablica[idx].czasDodania)) {
             idx = i;
-        }
+        }                                                                           //to samo co find_max, wzbogacone o usuwanie elementu i przesuwanie pozostałych
     }
 
     int wynik = tablica[idx].wartosc;
@@ -77,7 +77,7 @@ int TablicaPriorytetowa::extract_max() {
 void TablicaPriorytetowa::modify_key(int wartosc, int nowyPriorytet) {
     for (size_t i = 0; i < rozmiar; ++i) {
         if (tablica[i].wartosc == wartosc) {
-            tablica[i].priorytet = nowyPriorytet;
+            tablica[i].priorytet = nowyPriorytet;                               //zmiana wartości obiektu
             return;
         }
     }

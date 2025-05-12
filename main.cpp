@@ -28,23 +28,23 @@ int main() {
 
         switch (wybor) {
             case 1:
-                cout << "BADANIE INSERT (kopiec i tablica)\n";
+                cout << "BADANIE INSERT\n";
             test::test_Insert(size, samples, operations);
             break;
             case 2:
-                cout << "BADANIE EXTRACT_MAX (kopiec i tablica)\n";
+                cout << "BADANIE EXTRACT_MAX\n";
             test::test_ExtractMax(size, samples, operations);
             break;
             case 3:
-                cout << "BADANIE FIND_MAX (kopiec i tablica)\n";
+                cout << "BADANIE FIND_MAX\n";
             test::test_FindMax(size, samples, operations);
             break;
             case 4:
-                cout << "BADANIE MODIFY_KEY (kopiec i tablica)\n";
+                cout << "BADANIE MODIFY_KEY\n";
             test::test_ModifyKey(size, samples, operations);
             break;
             case 5:
-                cout << "BADANIE RETURN_SIZE (kopiec i tablica)\n";
+                cout << "BADANIE RETURN_SIZE\n";
             test::test_Size(size, samples, operations);
             break;
             case 0:

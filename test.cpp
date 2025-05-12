@@ -10,7 +10,7 @@ using namespace std;
 using namespace std::chrono;
 
 static int randomPriority(int size) {
-    return rand() % (size * 10);
+    return rand() % (size * 10);                //generowanie priorytetu w zakresie wielokrotnie większym od rozmiaru struktury
 }
 
 void test::test_Insert(int size, int samples, int operations) {
