@@ -7,7 +7,7 @@ using namespace std;
 
 static bool initialized = false;
 static bool shuffle_initialized = false;
-
+/*
 int* generateArray::generateRandom(size_t n) {
     if (!initialized) {
         srand(static_cast<unsigned>(time(nullptr)));
@@ -21,14 +21,14 @@ int* generateArray::generateRandom(size_t n) {
 
     return arr;
 }
-
+*/
 vector<int> generateArray::generateUniqueValues(size_t n) {
     if (!shuffle_initialized) {
         srand(static_cast<unsigned>(time(nullptr)));
         shuffle_initialized = true;
     }
 
-    vector<int> values(n);
+    vector<int> values(n);                                  //FISHER-YATES SHUFFLE: generator elementów niepowtarzalnych
     for (size_t i = 0; i < n; ++i) {
         values[i] = static_cast<int>(i);
     }

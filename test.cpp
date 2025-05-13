@@ -10,7 +10,7 @@ using namespace std;
 using namespace std::chrono;
 
 static int randomPriority(int size) {
-    return rand() % (size * 10);
+    return rand() % (size * 10);                //generowanie priorytetu w zakresie wielokrotnie większym od rozmiaru struktury
 }
 
 void test::test_Insert(int size, int samples, int operations) {
@@ -97,7 +97,7 @@ void test::test_FindMax(int size, int samples, int operations) {
 
         for (int i = 0; i < operations; ++i) {
             auto t0 = high_resolution_clock::now();
-            heap.find_max();
+            heap.peek();
             auto t1 = high_resolution_clock::now();
             heap_sum += duration_cast<nanoseconds>(t1 - t0).count();
 
