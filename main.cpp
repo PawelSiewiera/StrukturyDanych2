@@ -3,9 +3,14 @@
 
 using namespace std;
 
+/**
+ * @brief Program testujący struktury danych
+ */
+
 int main() {
     int size, samples, operations;
 
+    // Pobranie parametrów testu od użytkownika
     cout << "Podaj rozmiar struktury: ";
     cin >> size;
     cout << "Podaj liczbe egzemplarzy: ";
@@ -16,6 +21,7 @@ int main() {
     int wybor;
 
     do {
+        // Menu wyboru testu
         cout << "\nWYBIERZ METODE BADAWCZA\n";
         cout << "0. Zakoncz program\n";
         cout << "1. insert(e, p)\n";
