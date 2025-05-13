@@ -97,7 +97,7 @@ void test::test_FindMax(int size, int samples, int operations) {
 
         for (int i = 0; i < operations; ++i) {
             auto t0 = high_resolution_clock::now();
-            heap.find_max();
+            heap.peek();
             auto t1 = high_resolution_clock::now();
             heap_sum += duration_cast<nanoseconds>(t1 - t0).count();
 
